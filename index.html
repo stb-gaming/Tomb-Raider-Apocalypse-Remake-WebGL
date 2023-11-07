@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tomb Raider Apocalypse</title>
+    <style>
+        .monogame {
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        div.monogame {
+            text-align: center;
+        }
+
+        div.monogame_border {
+            border: 1px solid black;
+        }
+
+        canvas.monogame {
+            border: 0px none;
+            background-color: black;
+        }
+    </style>
+
+    <script src="bridge.min.js" defer></script>
+    <script src="bridge.meta.min.js" defer></script>
+    <script src="MonoGame.Framework.min.js" defer></script>
+    <script src="MonoGame.Framework.meta.min.js" defer></script>
+    <script src="TombTV.min.js" defer></script>
+    <script src="TombTV.meta.min.js" defer></script>
+</head>
+<body>
+    <div class="monogame" id="status">Loading...</div>
+    <div class="monogame_border">
+        <canvas class="monogame" id="monogamecanvas"></canvas>
+    </div>
+</body>
+</html>
