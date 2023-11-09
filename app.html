@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Tomb Raider Apocalypse</title>
+
+	<link rel="stylesheet" href="https://stb-gaming.github.io/high-scores/assets/css/hs.css">
+	<link rel="stylesheet" href="../style.css">
+    <style>
+        .monogame {
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        div.monogame {
+            text-align: center;
+        }
+
+        div.monogame_border {
+            border: 1px solid black;
+        }
+
+        canvas.monogame {
+            border: 0px none;
+            background-color: black;
+        }
+    </style>
+
+	<script src="../userscripts/sky-remote.user.js"></script>
+	<script src="../js/input/mobile.js" onerror="redirectToHelp()"></script>
+	<script src="../js/func/toolbar.js" onerror="redirectToHelp()"></script>
+	<script src="../js/func/mouse-binder.js" onerror="redirectToHelp()"></script>
+	<script src="../js/input/binder.js" onerror="redirectToHelp()"></script>
+	<script src="../js/func/fullscreen.js" onerror="redirectToHelp()"></script>
+	<script src="../js/func/app.js" onerror="redirectToHelp()"></script>
+
+    <script src="bridge.min.js" ></script>
+    <script src="bridge.meta.min.js" ></script>
+    <script src="MonoGame.Framework.min.js" ></script>
+    <script src="MonoGame.Framework.meta.min.js" ></script>
+    <script src="TombTV.min.js" ></script>
+    <script src="TombTV.meta.min.js" ></script>
+</head>
+<body>
+    <div class="monogame" id="status">Loading...</div>
+    <div class="monogame_border">
+        <canvas class="monogame" id="monogamecanvas"></canvas>
+		<div class="toolbar bottom">
+			<a href="https://stb-gaming.github.io/high-scores/games" class="btn big trans" data-balloon="More Games"><img src="https://stb-gaming.github.io/sky-games-images/SKY%20Games/nogame.png" alt="🎮"></a>
+			<a id="highscore_button" data-balloon="High Scores"href="https://stb-gaming.github.io/high-scores/" class="btn big trans" >🏆</a>
+			<a  data-balloon="Controls" id="controls_button" href="javascript:createSettings()" class="btn big trans" >🎮</a>
+			<a data-balloon="Help" id="help_button" href="javascript:SkyRemote.pressButton('help')" class="btn big trans" >❓</a>
+			<a id="denki_button" href="javascript:toDenki()" class="btn big trans" data-balloon="Back To Denki"><img src="../denki.png" alt="💡"></a>
+			<a data-balloon="Fullscreen" id="fullscreen_button" class="btn big trans" href="javascript:toggleFullscreen(document.querySelector('.emscripten_border')||document.querySelector('.monogame_border'))">⛶</a>
+		</div>
+    </div>
+</body>
+</html>
